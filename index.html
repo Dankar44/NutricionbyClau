@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrición by Claudia — Nutricionista y Biotecnóloga en Madrid</title>
+  <meta name="description"
+    content="Claudia es nutricionista colegiada (MAD01683) y biotecnóloga en Madrid. Te enseña a comer mejor sin dejar de disfrutar. Consultas presenciales y online.">
+  <meta name="keywords"
+    content="nutricionista Madrid, nutrición online, dietista, biotecnóloga, alimentación saludable, Claudia nutricionista">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍒</text></svg>">
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#inicio" class="nav-logo">
+        Nutrición <span class="by">by</span> <span>Claudia</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre Mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#recetas">Recetas</a>
+        <a href="#testimonios">Opiniones</a>
+        <a href="#contacto" class="btn btn-primary">Reserva tu Cita</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero section" id="inicio">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          Nutricionista Colegiada · MAD01683
+        </div>
+        <h1 class="hero-title">
+          Te enseño a <span class="highlight">comer mejor</span>
+        </h1>
+        <span class="hero-script">...sin dejar de disfrutar 🍒</span>
+        <p class="hero-description">
+          Soy Claudia, nutricionista y biotecnóloga. Mi enfoque combina la ciencia más actual con un plan realista que
+          se adapta a tu vida. Porque cuidarte no debería ser aburrido.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contacto" class="btn btn-primary" id="heroCta">
+            Empieza tu cambio hoy
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#servicios" class="btn btn-outline" id="heroServices">Conoce mis servicios</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="500">0</span>
+            <span class="hero-stat-label">Pacientes</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="8">0</span>
+            <span class="hero-stat-label">Años experiencia</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="98">0</span>
+            <span class="hero-stat-label">% Satisfacción</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="assets/hero.png" alt="Plato saludable con frutas frescas y yogur sobre mármol blanco"
+            loading="eager">
+        </div>
+        <div class="hero-float-card card-1">
+          <div class="icon pink">🧬</div>
+          <div class="text">
+            <strong>Base científica</strong>
+            <span>Biotecnóloga y nutricionista</span>
+          </div>
+        </div>
+        <div class="hero-float-card card-2">
+          <div class="icon green">🥗</div>
+          <div class="text">
+            <strong>Plan personalizado</strong>
+            <span>Adaptado a tu estilo de vida</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== AUTHORITY BAR ========== -->
+  <div class="authority-bar">
+    <div class="container">
+      <p>🧬 <strong>Claudia</strong> — Nutricionista Colegiada (Col. <strong>MAD01683</strong>) y Biotecnóloga ·
+        Consulta en Madrid y Online</p>
+    </div>
+  </div>
+
+  <!-- ========== SOBRE MÍ ========== -->
+  <section class="about section" id="sobre-mi">
+    <div class="container">
+      <div class="about-image-container reveal">
+        <div class="about-decoration"></div>
+        <div class="about-image">
+          <img src="assets/claudia.png" alt="Claudia, nutricionista y biotecnóloga en su consulta de Madrid">
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-label reveal">Sobre Mí</span>
+        <h2 class="section-title reveal reveal-delay-1">La ciencia de comer bien, <br>el arte de <em>disfrutarlo</em>
+        </h2>
+        <p class="about-text reveal reveal-delay-2">
+          Estudié Biotecnología porque quería entender cómo funciona nuestro cuerpo a nivel molecular. Pero fue en la
+          nutrición donde descubrí mi verdadera vocación: ayudar a las personas a transformar su relación con la comida.
+        </p>
+        <div class="about-highlight reveal reveal-delay-2">
+          "No creo en las dietas de castigo. Creo en entender tu cuerpo, escucharlo y darle lo que necesita — sin
+          renunciar a lo que te hace feliz."
+        </div>
+        <p class="about-text reveal reveal-delay-3">
+          Desde mi consulta en Madrid atiendo de forma presencial y online. Cada plan es único y está basado en
+          evidencia científica, no en modas. Mi objetivo es que aprendas a comer, no que dependas de mí.
+        </p>
+        <div class="about-features reveal reveal-delay-3">
+          <div class="about-feature">
+            <span class="check">✓</span>
+            Nutricionista colegiada
+          </div>
+          <div class="about-feature">
+            <span class="check">✓</span>
+            Grado en Biotecnología
+          </div>
+          <div class="about-feature">
+            <span class="check">✓</span>
+            Consulta presencial y online
+          </div>
+          <div class="about-feature">
+            <span class="check">✓</span>
+            Evidencia científica
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICIOS ========== -->
+  <section class="services section" id="servicios">
+    <div class="container">
+      <div class="services-header">
+        <span class="section-label reveal">Servicios</span>
+        <h2 class="section-title reveal reveal-delay-1">Un plan diseñado para ti</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Cada persona es diferente. Por eso mis planes se adaptan a tus
+          objetivos, tu rutina y tus gustos. Sin alimentos prohibidos, sin culpa.</p>
+      </div>
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <h3 class="service-title">Nutrición Personalizada</h3>
+          <p class="service-desc">Plan nutricional adaptado a tu metabolismo, estilo de vida y preferencias
+            alimentarias. Sin menús rígidos.</p>
+          <ul class="service-features">
+            <li>Valoración antropométrica completa</li>
+            <li>Plan de alimentación semanal</li>
+            <li>Lista de la compra personalizada</li>
+            <li>Seguimiento mensual</li>
+          </ul>
+          <div class="service-price">
+            <span class="amount">60€</span>
+            <span class="period">/ consulta</span>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+            </svg>
+          </div>
+          <h3 class="service-title">Nutrición Clínica</h3>
+          <p class="service-desc">Abordaje nutricional especializado en patologías: diabetes, SOP, SIBO, intolerancias,
+            trastornos digestivos.</p>
+          <ul class="service-features">
+            <li>Valoración de analíticas</li>
+            <li>Coordinación con tu médico</li>
+            <li>Plan adaptado a tu patología</li>
+            <li>Educación nutricional</li>
+          </ul>
+          <div class="service-price">
+            <span class="amount">70€</span>
+            <span class="period">/ consulta</span>
+          </div>
+        </div>
+        <!-- Service 3 -->
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <h3 class="service-title">Reeducación Alimentaria</h3>
+          <p class="service-desc">Aprende a comer sin necesidad de seguir una dieta. Cambia tu relación con la comida de
+            forma definitiva.</p>
+          <ul class="service-features">
+            <li>Trabajo de conducta alimentaria</li>
+            <li>Mindful eating</li>
+            <li>Recetas y batch cooking</li>
+            <li>Soporte por WhatsApp</li>
+          </ul>
+          <div class="service-price">
+            <span class="amount">55€</span>
+            <span class="period">/ sesión</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INSTAGRAM FEED / CONTENT ========== -->
+  <section class="instagram-feed section" id="recetas">
+    <div class="container">
+      <div class="instagram-header">
+        <span class="section-label reveal">Contenido & Recetas</span>
+        <h2 class="section-title reveal reveal-delay-1">Mi cocina en tu pantalla 📱</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Comparto recetas, tips y mi día a día como nutricionista en
+          Instagram. ¡Sígueme para no perderte nada!</p>
+      </div>
+
+      <!-- Instagram Profile Card -->
+      <div class="ig-profile reveal" id="igProfile">
+        <div class="ig-profile-inner">
+          <img src="assets/claudia.png" alt="Claudia nutricionista" class="ig-avatar">
+          <div class="ig-profile-info">
+            <div class="ig-handle">
+              @nutricionbyclaudia
+              <svg class="verified" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+              </svg>
+            </div>
+            <div class="ig-bio">Nutricionista 🍒 · Biotecnóloga 🧬 · Te enseño a comer mejor</div>
+            <div class="ig-stats-row">
+              <span><strong>16K</strong> seguidores</span>
+              <span><strong>212</strong> publicaciones</span>
+              <span><strong>500+</strong> recetas</span>
+            </div>
+          </div>
+          <a href="https://www.instagram.com/nutricionbyclaudia" target="_blank" rel="noopener" class="ig-follow-btn"
+            id="igFollowBtn">Seguir</a>
+        </div>
+      </div>
+
+      <!-- Reel Carousel -->
+      <div class="reel-carousel-wrapper reveal">
+        <button class="carousel-btn prev" aria-label="Anterior vídeo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="reel-carousel-track-container">
+          <ul class="reel-carousel-track">
+            <!-- Video 1 -->
+            <li class="reel-slide">
+              <div class="ig-embed-card">
+                <video class="ig-video-player" controls preload="metadata" playsinline width="340" height="600">
+                  <source src="videos/video1.mp4" type="video/mp4">
+                  Tu navegador no soporta la reproducción de video.
+                </video>
+              </div>
+            </li>
+            <!-- Video 2 -->
+            <li class="reel-slide">
+              <div class="ig-embed-card">
+                <video class="ig-video-player" controls preload="metadata" playsinline width="340" height="600">
+                  <source src="videos/video2.mp4" type="video/mp4">
+                  Tu navegador no soporta la reproducción de video.
+                </video>
+              </div>
+            </li>
+            <!-- Video 3 -->
+            <li class="reel-slide">
+              <div class="ig-embed-card">
+                <video class="ig-video-player" controls preload="metadata" playsinline width="340" height="600">
+                  <source src="videos/video3.mp4" type="video/mp4">
+                  Tu navegador no soporta la reproducción de video.
+                </video>
+              </div>
+            </li>
+            <!-- Video 4 -->
+            <li class="reel-slide">
+              <div class="ig-embed-card">
+                <video class="ig-video-player" controls preload="metadata" playsinline width="340" height="600">
+                  <source src="videos/video4.mp4" type="video/mp4">
+                  Tu navegador no soporta la reproducción de video.
+                </video>
+              </div>
+            </li>
+            <!-- Video 5 -->
+            <li class="reel-slide">
+              <div class="ig-embed-card">
+                <video class="ig-video-player" controls preload="metadata" playsinline width="340" height="600">
+                  <source src="videos/video5.mp4" type="video/mp4">
+                  Tu navegador no soporta la reproducción de video.
+                </video>
+              </div>
+            </li>
+            <!-- Video 6 -->
+            <li class="reel-slide">
+              <div class="ig-embed-card">
+                <video class="ig-video-player" controls preload="metadata" playsinline width="340" height="600">
+                  <source src="videos/video6.mp4" type="video/mp4">
+                  Tu navegador no soporta la reproducción de video.
+                </video>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="carousel-btn next" aria-label="Siguiente vídeo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <div class="carousel-indicators reveal">
+        <!-- Dots will be added by JS -->
+      </div>
+
+      <!-- CTA -->
+      <div class="ig-cta reveal">
+        <a href="https://www.instagram.com/nutricionbyclaudia" target="_blank" rel="noopener" class="ig-cta-btn"
+          id="igCtaBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+          Sígueme en Instagram →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIOS ========== -->
+  <section class="testimonials section" id="testimonios">
+    <div class="container">
+      <div class="testimonials-header">
+        <span class="section-label reveal">Opiniones</span>
+        <h2 class="section-title reveal reveal-delay-1">Lo que dicen mis pacientes</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Llevaba años haciendo dietas que no funcionaban. Con Claudia aprendí a comer de
+            verdad. He perdido 12 kg sin pasar hambre y sin dejar de cenar con mis amigos."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MG</div>
+            <div class="testimonial-info">
+              <strong>María G.</strong>
+              <span>Paciente desde 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Como deportista necesitaba un plan que se adaptara a mis entrenamientos. Claudia
+            entendió mi cuerpo desde el primer día. Mi rendimiento ha mejorado muchísimo."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JR</div>
+            <div class="testimonial-info">
+              <strong>Javier R.</strong>
+              <span>Paciente desde 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Tenía SIBO y ningún médico me daba soluciones reales. Claudia diseñó un plan que
+            alivió mis síntomas en semanas. Se nota que sabe de ciencia. ¡La recomiendo 100%!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LC</div>
+            <div class="testimonial-info">
+              <strong>Laura C.</strong>
+              <span>Paciente desde 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTO ========== -->
+  <section class="contact section" id="contacto">
+    <div class="container">
+      <div class="contact-info">
+        <span class="section-label reveal">Contacto</span>
+        <h2 class="section-title reveal reveal-delay-1">¿Lista para empezar?</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Da el primer paso hacia una alimentación que te haga sentir
+          bien. Reserva tu primera consulta y hablamos sin compromiso.</p>
+        <div class="contact-methods reveal reveal-delay-2">
+          <div class="contact-method">
+            <div class="contact-method-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div class="contact-method-text">
+              <strong>Consulta en Madrid</strong>
+              <span>Calle ejemplo 123, 28001 Madrid</span>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-method-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+            </div>
+            <div class="contact-method-text">
+              <strong>Email</strong>
+              <span>hola@nutricionbyclaudia.es</span>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-method-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </div>
+            <div class="contact-method-text">
+              <strong>Teléfono</strong>
+              <span>+34 600 000 000</span>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/34600000000?text=Hola%20Claudia,%20me%20gustaría%20reservar%20una%20consulta"
+          class="contact-whatsapp reveal reveal-delay-3" id="whatsappBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Escríbeme por WhatsApp
+        </a>
+      </div>
+      <div class="contact-form-wrapper reveal">
+        <h3>Reserva tu consulta</h3>
+        <p>Rellena el formulario y te contacto en menos de 24h.</p>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000">
+          </div>
+          <div class="form-group">
+            <label for="service">¿Qué servicio te interesa?</label>
+            <select id="service" name="service">
+              <option value="" disabled selected>Elige una opción</option>
+              <option value="personalizada">Nutrición Personalizada</option>
+              <option value="clinica">Nutrición Clínica</option>
+              <option value="reeducacion">Reeducación Alimentaria</option>
+              <option value="otro">Otro / No estoy segura</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Cuéntame un poco sobre ti</label>
+            <textarea id="message" name="message"
+              placeholder="¿Cuál es tu objetivo? ¿Tienes alguna patología? Todo lo que me cuentes me ayudará a orientarte mejor..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+            Enviar solicitud
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#inicio" class="nav-logo">
+            Nutrición <span class="by">by</span> <span>Claudia</span>
+          </a>
+          <p>Te enseño a comer mejor sin dejar de disfrutar. Nutrición basada en ciencia, planes adaptados a tu vida.
+            Consulta en Madrid y online.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" id="socialInstagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" aria-label="TikTok" id="socialTiktok">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.51a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13.1a8.27 8.27 0 005.58 2.17V11.8a4.83 4.83 0 01-3.77-1.88V6.69h3.77z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" id="socialLinkedin">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#recetas">Recetas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#servicios">Nutrición Personalizada</a></li>
+            <li><a href="#servicios">Nutrición Clínica</a></li>
+            <li><a href="#servicios">Reeducación Alimentaria</a></li>
+            <li><a href="#contacto">Consulta Online</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Aviso Legal</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Política de Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Nutrición by Claudia. Todos los derechos reservados.</p>
+        <div class="footer-credential">
+          🧬 Nutricionista Colegiada · <a href="#">MAD01683</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
