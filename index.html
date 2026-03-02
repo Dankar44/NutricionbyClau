@@ -714,15 +714,32 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const loadMoreBtn = document.getElementById('loadMoreGalleryBtn');
+      const allItems = document.querySelectorAll('.g-item');
+      const isMobile = window.innerWidth <= 768;
+      const itemsToLoad = isMobile ? 4 : 6;
+
+      // On mobile, hide initial items beyond the first 4
+      if (isMobile) {
+        let initialVisible = 0;
+        allItems.forEach(item => {
+          if (!item.style.display || item.style.display !== 'none') {
+            initialVisible++;
+            if (initialVisible > 4) {
+              item.style.display = 'none';
+            }
+          }
+        });
+      }
+
       const hiddenItems = document.querySelectorAll('.g-item[style*="display: none"]');
 
       if (loadMoreBtn && hiddenItems.length > 0) {
         loadMoreBtn.addEventListener('click', () => {
-          // Show 6 more items
+          // Show items based on screen size
           let shownCount = 0;
           const currentHidden = document.querySelectorAll('.g-item[style*="display: none"]');
           currentHidden.forEach(item => {
-            if (shownCount < 6) {
+            if (shownCount < itemsToLoad) {
               item.style.display = 'block';
               shownCount++;
             }
