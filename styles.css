@@ -1893,8 +1893,8 @@ select {
     display: none;
   }
 
-  .hero-image-wrapper img {
-    height: 320px;
+  .hero-visual {
+    display: none;
   }
 
   .hero-badge {
