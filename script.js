@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startAutoSlide = () => {
       clearInterval(autoSlideInterval);
       if (!isVideoPlaying) {
-        autoSlideInterval = setInterval(slideNext, 4000); // 4 seconds interval, slower
+        autoSlideInterval = setInterval(slideNext, 8000); // 8 seconds interval, slower
       }
     };
 

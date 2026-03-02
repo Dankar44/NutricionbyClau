@@ -13,9 +13,9 @@
   --blush: #F8E5E5;
   --rose: #FADCD9;
   --rose-medium: #F0B8B8;
-  --cherry: #C81D4E;
-  --cherry-dark: #A01640;
-  --cherry-light: rgba(200, 29, 78, 0.08);
+  --cherry: #D2042D;
+  --cherry-dark: #A20322;
+  --cherry-light: rgba(210, 4, 45, 0.08);
   --text-dark: #2B191D;
   --text-body: #333333;
   --text-muted: #777777;
@@ -30,7 +30,7 @@
 
   /* Spacing */
   --section-pad: 120px;
-  --container-width: 1200px;
+  --container-width: 1300px;
 
   /* Transitions */
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
@@ -146,6 +146,7 @@ select {
   font-size: 1.05rem;
   color: var(--text-muted);
   max-width: 600px;
+  margin: 0 auto 30px auto;
   line-height: 1.8;
 }
 
@@ -199,14 +200,23 @@ select {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 20px;
 }
 
 .nav-links .btn {
   white-space: nowrap;
-  color: var(--white);
+  color: var(--white) !important;
   padding: 10px 24px;
   font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.nav-links .btn:hover {
+  color: var(--white) !important;
+}
+
+.nav-links .btn::after {
+  display: none !important;
 }
 
 .nav-links a {
@@ -328,7 +338,9 @@ select {
    ======================================== */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: auto;
+  padding-top: 180px;
+  padding-bottom: 100px;
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, var(--white) 0%, var(--blush) 50%, var(--rose) 100%);
@@ -698,12 +710,14 @@ select {
 
 .service-card {
   background: var(--white);
-  padding: 48px 36px;
+  padding: 44px 28px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   transition: all var(--transition-medium);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card::before {
@@ -794,8 +808,8 @@ select {
 }
 
 .service-price {
-  margin-top: 24px;
-  padding-top: 20px;
+  margin-top: auto;
+  padding-top: 24px;
   border-top: 1px solid var(--blush);
   display: flex;
   align-items: baseline;
@@ -1129,7 +1143,7 @@ select {
 
 .reel-slide .ig-video-player {
   width: 100% !important;
-  max-width: 380px !important;
+  max-width: 550px !important;
   min-width: 100% !important;
   height: auto !important;
   aspect-ratio: 17 / 30 !important;
@@ -1236,7 +1250,7 @@ select {
 /* CTA to Instagram */
 .ig-cta {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 24px;
 }
 
 .ig-cta-btn {
@@ -1262,6 +1276,54 @@ select {
 .ig-cta-btn svg {
   width: 20px;
   height: 20px;
+}
+
+/* ========================================
+   GALLERY
+   ======================================== */
+.gallery {
+  background: var(--white);
+  padding-top: 24px;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-header .section-label {
+  justify-content: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gallery-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.gallery-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.gallery-item:hover .gallery-image-wrapper img {
+  transform: scale(1.08);
 }
 
 /* ========================================
@@ -1705,6 +1767,7 @@ select {
     margin: 0 auto;
   }
 
+  .gallery-grid,
   .services-grid,
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1866,7 +1929,8 @@ select {
     letter-spacing: 2px;
   }
 
-  /* --- Mobile Services --- */
+  /* --- Mobile Services & Gallery --- */
+  .gallery-grid,
   .services-grid,
   .testimonials-grid {
     grid-template-columns: 1fr;
