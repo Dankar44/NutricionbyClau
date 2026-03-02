@@ -1119,6 +1119,7 @@ select {
 @media (max-width: 768px) {
   .reel-slide {
     flex: 0 0 100%;
+    padding: 0 2px;
   }
 }
 

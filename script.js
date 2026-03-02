@@ -137,19 +137,47 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Simulate submission
+      // Real submission via FormSubmit AJAX
       submitBtn.textContent = 'Enviando...';
       submitBtn.disabled = true;
 
-      setTimeout(() => {
-        showFormMessage('¡Gracias! Te contactaré en menos de 24 horas. 🍒', 'success');
-        form.reset();
-        submitBtn.innerHTML = `
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+
+      fetch("https://formsubmit.co/ajax/claudiafores.nutricion@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phone: phone,
+          service: service,
+          message: message,
+          _subject: "Nueva solicitud de consulta desde la web"
+        })
+      })
+        .then(response => response.json())
+        .then(data => {
+          showFormMessage('¡Gracias! Te contactaré en menos de 24 horas. 🍒', 'success');
+          form.reset();
+          submitBtn.innerHTML = `
           Enviar solicitud
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
         `;
-        submitBtn.disabled = false;
-      }, 1500);
+          submitBtn.disabled = false;
+        })
+        .catch(error => {
+          showFormMessage('Hubo un error de conexión al enviar. Por favor, intenta de nuevo.', 'error');
+          submitBtn.innerHTML = `
+          Reintentar
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        `;
+          submitBtn.disabled = false;
+        });
     });
   }
 
