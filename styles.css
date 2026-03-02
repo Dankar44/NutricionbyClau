@@ -1940,6 +1940,10 @@ select {
   }
 
   /* --- Mobile Services & Gallery --- */
+  .ig-profile {
+    display: none;
+  }
+
   .gallery-grid,
   .services-grid,
   .testimonials-grid {
