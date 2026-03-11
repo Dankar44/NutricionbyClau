@@ -1,0 +1,7 @@
+# Robots.txt para Nutrición by Claudia
+# https://www.nutricionbyclaudia.es
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.nutricionbyclaudia.es/sitemap.xml
