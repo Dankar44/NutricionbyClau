@@ -17,6 +17,12 @@
   <meta property="og:description" content="Nutricionista colegiada. Consulta online. Te enseño a comer mejor sin dejar de disfrutar.">
   <meta property="og:locale" content="es_ES">
   <meta property="og:image" content="https://www.nutricionbyclaudia.es/imagenes/claudia.webp">
+  <!-- Preconnect para fuentes (menos bloqueo del primer render) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fuentes en carga diferida para no bloquear LCP -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍒</text></svg>">
@@ -48,6 +54,7 @@
     <div class="nav-overlay" id="navOverlay"></div>
   </nav>
 
+  <main id="main-content">
   <!-- ========== HERO ========== -->
   <section class="hero section" id="inicio">
     <div class="container">
@@ -116,7 +123,7 @@
       <div class="about-image-container reveal">
         <div class="about-decoration"></div>
         <div class="about-image">
-          <img src="imagenes/claudia.webp" alt="Claudia, nutricionista y biotecnóloga en su consulta">
+          <img src="imagenes/claudia.webp" alt="Claudia, nutricionista y biotecnóloga en su consulta" width="500" height="725" decoding="async" loading="lazy">
         </div>
       </div>
       <div class="about-content">
@@ -266,7 +273,7 @@
       <!-- Instagram Profile Card -->
       <div class="ig-profile reveal" id="igProfile">
         <div class="ig-profile-inner">
-          <img src="imagenes/claudia.webp" alt="Claudia nutricionista" class="ig-avatar">
+          <img src="imagenes/claudia.webp" alt="Claudia nutricionista" class="ig-avatar" width="120" height="120" decoding="async">
           <div class="ig-profile-info">
             <div class="ig-handle">
               @nutricionbyclaudia
@@ -925,6 +932,8 @@ Durante mi vida he hecho muchas dietas que no me funcionaban pero con Claudia no
     </div>
   </section>
 
+  </main>
+
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
@@ -936,7 +945,7 @@ Durante mi vida he hecho muchas dietas que no me funcionaban pero con Claudia no
           <p>Te enseño a comer mejor sin dejar de disfrutar. Nutrición basada en ciencia, planes adaptados a tu vida.
             Consulta online.</p>
           <div class="footer-social">
-            <a href="#" aria-label="Instagram" id="socialInstagram">
+            <a href="https://www.instagram.com/nutricionbyclaudia" target="_blank" rel="noopener" aria-label="Seguir a Nutrición by Claudia en Instagram" title="Instagram - Nutrición by Claudia" id="socialInstagram">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -944,13 +953,13 @@ Durante mi vida he hecho muchas dietas que no me funcionaban pero con Claudia no
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
               </svg>
             </a>
-            <a href="#" aria-label="TikTok" id="socialTiktok">
+            <a href="#" aria-label="TikTok - Nutrición by Claudia" title="TikTok" id="socialTiktok">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.51a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13.1a8.27 8.27 0 005.58 2.17V11.8a4.83 4.83 0 01-3.77-1.88V6.69h3.77z" />
               </svg>
             </a>
-            <a href="#" aria-label="LinkedIn" id="socialLinkedin">
+            <a href="#" aria-label="LinkedIn - Nutrición by Claudia" title="LinkedIn" id="socialLinkedin">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -992,7 +1001,7 @@ Durante mi vida he hecho muchas dietas que no me funcionaban pero con Claudia no
       <div class="footer-bottom">
         <p>© 2026 Nutrición by Claudia. Todos los derechos reservados.</p>
         <div class="footer-credential">
-          🧬 Nutricionista Colegiada · <a href="#">MAD01683</a>
+          🧬 Nutricionista Colegiada · <a href="#" title="Número de colegiación MAD01683 - Colegio Oficial de Dietistas-Nutricionistas" aria-label="Ver colegiación MAD01683">MAD01683</a>
         </div>
       </div>
     </div>

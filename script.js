@@ -278,9 +278,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dots = Array.from(dotsNav.children);
 
+    let cachedInnerWidth = window.innerWidth;
+    const updateCachedWidth = () => { cachedInnerWidth = window.innerWidth; };
+    window.addEventListener('resize', updateCachedWidth);
+
     const getItemsPerView = () => {
-      if (window.innerWidth <= 768) return 1;
-      if (window.innerWidth <= 1024) return 2;
+      if (cachedInnerWidth <= 768) return 1;
+      if (cachedInnerWidth <= 1024) return 2;
       return 3;
     };
 
